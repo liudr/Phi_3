@@ -94,7 +94,8 @@ char * function_keys[]={"U","D","L","R","B","A"}; ///< All function key names ar
 multiple_button_input * keypads[]={&my_btns,0}; // This adds all available keypads as inputs for phi_prompt library
 
 RTC_DS3231 RTC;
-LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE); // This works with a particular I2C LCD with blue square potentiometer and a back light enable jumper. Refer to diagrams. Some other variations use 0x27 instead of 0x3F.
+LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE); // This works with a particular I2C LCD with blue square potentiometer and a back light enable jumper. Refer to diagrams. Two typical variations use 0x27 or 0x3F.
+//LiquidCrystal_I2C lcd(0x3F, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE); // This works with a particular I2C LCD with blue square potentiometer and a back light enable jumper. Refer to diagrams. Two typical variations use 0x27 or 0x3F.
 
 const int total_beeps=4; // How many short beeps are grouped together, such as bi-bi-bi-bi   bi-bi-bi-bi for most alarm clocks. Some alarm clocks beeps constantly without short beeps and pauses. In this case, use 1.
 
